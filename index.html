@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<title>Angular test</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body>
+<script type="text/javascript" src="main.js"></script>
+<div ng-app="test" ng-controller="test">
+<canvas id="result" width="400" height="400"></canvas><br/>
+<textarea ng-model="code"></textarea><br/>
+<button ng-click="doStuff()">Do stuff!</button><br/>
+Code:<br/>
+function(sensorData, result) {<br/>
+{{code}}<br/>
+}<br/>
+sensorData: {<br/>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbspbeep: boolean, true if the sensor detects the target<br/>
+}<br/>
+result: {<br/>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbspturn: number, set to a number between -1 and 1 to steer<br/>
+}<br/>
+<br/>
+Result:<br/>
+{{result}}<br/>
+</div>
+</body>
+</html>
